@@ -5,17 +5,9 @@ import { Component } from '@angular/core';
   template: `
   <div class="container">
     <h1>Recipe-Box</h1>
+
     <ul>
-      <li>{{firstRecipe.title}}</li>
-      <ul>
-        <li>{{firstRecipe.ingredients[0]}}</li>
-        <li>{{firstRecipe.ingredients[1]}}</li>
-      </ul>
-      <h3>Directions</h3>
-      <ul>
-        <li>{{firstRecipe.directions[0]}}</li>
-        <li>{{firstRecipe.directions[1]}}</li>
-      </ul>
+      <li *ngFor="let currentRecipe of recipes">{{currentRecipe.title}} </li>
     </ul>
   </div>
   `
